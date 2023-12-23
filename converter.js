@@ -42,7 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                 let value = lines[i].split(':', 2)[1].trim();
                                 record['Website name'] = `"${value.replace(/"/g, '""')}"`;
                             } else if (lines[i].includes('Website URL:')) {
-                                record['Website URL'] = `"${lines[i].replace('Website URL: ', '').trim()}"`;
+                                let fixed_url = lines[i].replace('Website URL: ', '').trim();
+                                if (!fixed_url.startsWith('http')) {
+                                    fixed_url = 'https://' + fixed_url;
+                                }
+                                record['Website URL'] = `"${fixed_url}"`;
+                                // record['Website URL'] = `"${lines[i].replace('Website URL: ', '').trim()}"`;
                             } else if (lines[i].includes('Login:')) {
                                 let value = lines[i].split(':', 2)[1].trim();
                                 record['Login'] = `"${value.replace(/"/g, '""')}"`;

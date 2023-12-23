@@ -5,12 +5,88 @@
     <script src="./converter.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property='og:title' content='Kaspersky TXT to CSV Converter' />
+    <meta property='og:description' content="Converts Kaspersky Password Manager's TXT export files into a CSV file that can be imported into other password managers." />
+    <meta property='og:url' content='https://kaspersky-to-csv.ibaguette.com/' />
+    <meta property='og:image' content='https://kaspersky-to-csv.ibaguette.com/preview.png' />
+    <meta property='og:type' content='website' />
+    <meta property='og:site_name' content='Kaspersky TXT to CSV Converter' />
+    <meta property='og:locale' content='en_US' />
+    <meta name="description" content="Converts Kaspersky Password Manager's TXT export files into a CSV file that can be imported into other password managers.">
+    <meta name="keywords" content="Kaspersky, Password Manager, TXT, CSV, Converter, Export, Import, Password, Manager, Password Manager, Password Manager, Password">
+    <meta name="author" content="Draggie306">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kaspersky-to-csv.ibaguette.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .para {
+            text-align: center;
+            line-height: 1em;
+        }
+        #fileInput {
+            display: none;
+        }
+        #fileLabel {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #fileLabel:hover {
+            background-color: #49ac82;
+            transition: all 0.5s ease;
+        }
+        #convertButton {
+            background-color: #00acff; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #convertButton:hover {
+            background-color: #2adcf3;
+            transition: all 0.5s ease;
+        }
+    </style>
 </head>
 <body>
+    <h1>Kaspersky TXT to CSV Converter</h1>
+    <p class = "para">Converts Kaspersky Password Manager's TXT export files into a CSV file that can be imported into other password managers and browsers.</p>
+    <p class = "para">Simply export your passwords from Kaspersky Password Manager, and upload the TXT file here.</p>
+    <p class = "para">No files are uploaded to any server; all conversion is done locally in your browser.</p>
     <input type="file" id="fileInput" accept=".txt">
+    <label for="fileInput" id="fileLabel">Choose File</label>
     <button id="convertButton">Convert to CSV</button>
     <p id = "countOfAccounts"></p>
     <p id = "Status">Status: Loading conversion script...</p>
     <a id="downloadLink" style="display: none;"></a>
+    <br><br>
+    <p>Please read the README file for more information, and in case of any issues. <br> <a href="https://github.com/Draggie306/kaspersky-to-csv">
+
+    <!-- footer -->
+    <footer>
+        <p>Open source project by <a href="https://github.com/Draggie306/kaspersky-to-csv">@draggie306</a>!</p>
+    </footer>
 </body>
 </html>
