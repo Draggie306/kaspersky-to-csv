@@ -82,6 +82,8 @@ def process_text_file(text_file_path):
                         record['Website name'] = lines[i].split(':')[1].strip()
                     elif 'Website URL:' in lines[i]:
                         fixed_url = (lines[i].split('Website URL: ')[1]).strip()
+                        if not fixed_url.startswith('http'):
+                            fixed_url = 'https://' + fixed_url
                         record['Website URL'] = fixed_url
                     elif 'Login:' in lines[i]:
                         record['Login'] = lines[i].split(':')[1].strip()
