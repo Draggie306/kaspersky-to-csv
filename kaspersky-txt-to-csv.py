@@ -67,6 +67,10 @@ def process_text_file(text_file_path):
         lines = file.readlines()
 
     i = 0
+    # Compared to the JS implementation, this is a bit more efficient as less checks are made
+    # However, it may not be as accepting of edge cases, which the JS implementation has been tested for
+    # If you find any edge cases that this implementation does not handle, please report them to me
+    # Also, as the js version runs in the browser, it can be run on any OS, whereas this version is python and less new-user-friendly
     while i < len(lines):
         line = lines[i].strip()
 
@@ -120,7 +124,7 @@ def process_text_file(text_file_path):
                 writer.writerow([account['Application'], '', account['Login'], account['Password'], '', account['Comment']])
 
     print(f'CSV file \'kaspersky_export_{unix_time_seconds}.csv\' created successfully!')
-    os.startfile(os.path.join(directory, f'kaspersky_export_{unix_time_seconds}.csv'))
+    os.startfile(os.path.join(directory, f'kaspersky_export_{unix_time_seconds}.csv'))  # auto open the file in the default program (Excel)
 
 
 text_file_path = input('Enter the path of the text file: ')

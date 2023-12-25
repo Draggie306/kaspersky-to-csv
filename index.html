@@ -34,6 +34,7 @@
         .para {
             text-align: center;
             line-height: 1em;
+            margin: 0;
         }
         #fileInput {
             display: none;
@@ -75,8 +76,12 @@
 <body>
     <h1>Kaspersky TXT to CSV Converter</h1>
     <p class = "para">Converts Kaspersky Password Manager's TXT export files into a CSV file that can be imported into other password managers and browsers.</p>
-    <p class = "para">Simply export your passwords from Kaspersky Password Manager, and upload the TXT file here.</p>
-    <p class = "para">No files are uploaded to any server; all conversion is done locally in your browser.</p>
+    <br>
+    <p class = "para">Simply export your passwords from Kaspersky Password Manager, and select the TXT file here.</p>
+    <br>
+    <p class = "para">NOTE: <strong>This is entirely client-side, meaning that your data is not uploaded to any server.</strong> All conversion is done in your browser.</p>
+    <p class = "para">Alternatively, you can download the <a href="https://github.com/Draggie306/kaspersky-to-csv">source code</a> and run it locally.</p>
+    <br>
     <input type="file" id="fileInput" accept=".txt">
     <label for="fileInput" id="fileLabel">Choose File</label>
     <button id="convertButton">Convert to CSV</button>
@@ -88,7 +93,7 @@
 
     <!-- footer -->
     <footer>
-        <p>Open source project by <a href="https://github.com/Draggie306/kaspersky-to-csv">@draggie306</a>!</p>
+        <p>Open source project by <a href="https://github.com/Draggie306/kaspersky-to-csv">@draggie306</a>! You are completely free to browse the source code and contribute!</p>
     </footer>
 </body>
 </html>

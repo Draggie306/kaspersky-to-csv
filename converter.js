@@ -1,4 +1,4 @@
-// Last modified: 23/12/2023 19:28 by Draggie306
+// Last modified: 25/12/2023 16:27 by Draggie306
 // Converts Kaspersky Password Manager export to Chromium Password Manager CSV export
 
 // Permission is granted to anyone to use this software for any purpose, including commercial applications, providing that the following conditions are met:
@@ -11,7 +11,7 @@
 
 // on DOM load
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('Status').innerHTML = 'Status: Ready';
+    document.getElementById('Status').innerHTML = 'Status: Script loaded, ready to convert';
 
     // Ensure the element exists before attaching event listener
     var convertButton = document.getElementById('convertButton');
