@@ -56,7 +56,7 @@
             transition: all 0.5s ease;
         }
         #convertButton {
-            background-color: #00acff; /* Green */
+            background-color: #00acff;
             border: none;
             color: white;
             padding: 15px 32px;
@@ -70,6 +70,34 @@
         #convertButton:hover {
             background-color: #2adcf3;
             transition: all 0.5s ease;
+        }
+        #convertButton:not(:hover) {
+            background-color: #00acff;
+            transition: all 0.5s ease;
+        }
+        #downloadLink {
+            background-color: #00acff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #downloadLink:hover {
+            background-color: #2adcf3;
+            transition: all 0.5s ease;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
         }
     </style>
 </head>
