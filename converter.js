@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     // record['Website URL'] = `"${lines[i].replace('Website URL: ', '').trim()}"`;
                                 } else if (lines[i].includes('Login:')) {
                                     let value = lines[i].split(':', 2)[1].trim();
-                                    record['Login'] = `"${value.replace(/"/g, '""')}"`;
+                                    record['Login'] = `"${value.replace(/"/g, '"')}"`;
                                 } else if (lines[i].includes('Password:')) {
                                     let value = lines[i].split(':').slice(1).join(':').trim();
                                     record['Password'] = `"${value.replace(/"/g, '""')}"`;
